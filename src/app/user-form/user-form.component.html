@@ -1,0 +1,38 @@
+<div class="card my-5">
+    <div id="title">
+        <h2>Add / Edit an user</h2>
+    </div>
+    <div class="card-body" class="content" style="text-align: center;">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <!--Name-->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" [(ngModel)]="preUser.name" class="form-control" id="name" name="name"
+                    placeholder="Enter your name" required #name="ngModel">
+            </div>
+            <!--Firstname-->
+            <div class="form-group">
+                <label for="firstName">Firstname</label>
+                <input type="text" [(ngModel)]="preUser.firstName" class="form-control" id="firstName" name="firstName"
+                    placeholder="Enter your firstname" required #firstName="ngModel">
+            </div>
+            <!--Email-->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" [(ngModel)]="preUser.email" class="form-control" id="email" name="email"
+                    placeholder="Enter your email address" required #email="ngModel">
+            </div>
+            <!--Type-->
+            <div class="form-group">
+                <label style="margin-right: 20px;" for="type">Type</label>
+                <select matNativeControl [(ngModel)]="selectedType" name="type" required #type="ngModel">
+                    <option value=""></option>
+                    <option *ngFor="let type of typeUsers" [value]="type.id" [selected]="type.id == preUser.typeUser.id">
+                        {{type.type}}
+                    </option>
+                </select>
+            </div>
+            <button type="submit" [disabled]="isModif ? disableButton : !userForm.form.valid" class="submit btn">Submit</button>
+        </form>
+    </div>
+</div>

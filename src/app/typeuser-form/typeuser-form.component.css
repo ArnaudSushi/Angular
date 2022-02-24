@@ -1,0 +1,29 @@
+#title {
+    color: white;
+    background-color: #708090ff;
+    height: fit-content;
+}
+
+.title {
+    margin: 10px;
+}
+
+.content {
+    width: 30%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+::ng-deep .form-control {
+    border-color: #890e54ff;
+    border-width: 2px;
+}
+
+.submit {
+    width: 30%;
+    color: white;
+    margin-top: 20px;
+    background-color: #890e54ff;
+}

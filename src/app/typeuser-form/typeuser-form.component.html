@@ -1,0 +1,16 @@
+<div class="card my-5" style="text-align: center;">
+    <div id="title">
+        <h2 class="title">Add / Edit Type user</h2>
+    </div>
+    <div class="card-body" class="content">
+        <form (ngSubmit)="onSubmit()" #typeUsersForm="ngForm">
+            <!--Type-->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" [(ngModel)]="typeUsers.type" class="form-control" id="name" name="name"
+                    placeholder="Enter the type name" required #name="ngModel">
+            </div>
+            <button type="submit" [disabled]="!typeUsersForm.form.valid" class="submit btn">Submit</button>
+        </form>
+    </div>
+</div>

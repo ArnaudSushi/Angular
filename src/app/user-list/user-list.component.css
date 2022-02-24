@@ -1,0 +1,39 @@
+#title {
+    color: white;
+    background-color: #708090ff;
+    height: fit-content;
+}
+
+.title {
+    margin: 10px;
+}
+
+#addbtn {
+    border-color: #890e54ff;
+    background-color: #890e54ff;
+}
+
+.header {
+    color: white;
+    text-align: center;
+    background-color: #890e54ff;
+}
+
+::ng-deep .mat-sort-header-container {
+    display:flex;
+    color: white;
+    justify-content:center;
+    background-color: #890e54ff;
+}
+
+.edit {
+    color: black;
+    margin-right: 20px;
+    background-color: #80a9beff;
+}
+
+.delete {
+    color: white;
+    margin-left: 20px;
+    background-color: darkred;
+}
